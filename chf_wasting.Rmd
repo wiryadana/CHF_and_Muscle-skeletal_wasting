@@ -1,0 +1,72 @@
+---
+title: "Chronic heart failure negatively impact muscle mass and bone mineral density: a wasting issue beyond the current spotlight"
+author: "Kadek Adit Wiryadana"
+date: "`r Sys.time()`"
+output: 
+  bookdown::html_document2:
+    number_sections: false
+    code_folding: hide
+bibliography: ref.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Abstract
+*--- see [abstract](#abs) at the end of the document ---*
+
+---
+
+### Introduction
+
+### Methods
+
+#### Search strategy and study inclusion
+
+#### Data extraction and synthesis
+
+```{r}
+
+```
+
+
+#### Data Analysis
+```{r library, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(googlesheets4)
+library(gtsummary)
+library(meta)
+library(metafor)
+library(PRISMA2020)
+library(DT)
+library(robvis)
+```
+
+### Results
+
+### Discussion
+*--- on construction ---*
+
+### Disclosure
+*--- on construction ---*
+
+### References
+<div id="refs"></div>
+
+---
+
+#### Abstract {#abs}
+
+---
+
+#### Software (session info)
+```{r}
+print("Analysis run by: Kadek Adit Wiryadana (wiryadana@wiryadana.org)")
+sessionInfo()
+```
+
+```{bash}
+cp chf_wasting.html index.html
+```
+
