@@ -26,6 +26,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### Data extraction and synthesis
 
+```{r}
+
+```
+
+
 #### Data Analysis
 ```{r library, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -39,49 +44,6 @@ library(robvis)
 ```
 
 ### Results
-
-```{r}
-data <- read_sheet("https://docs.google.com/spreadsheets/d/1bVR6JFDdwcGuJiUJCh8uBhkvIABtRFWS4KGM85_aHNg/edit#gid=1037489593", sheet = 2)
-```
-
-```{r fig.align='center', fig.width=6, fig.height=4}
-hip <- metacont(
-  n.e = data$total_HF,
-  mean.e = data$mean_H_HF,
-  sd.e = data$SD_H_HF,
-  n.c = data$total_control,
-  mean.c = data$mean_H_control,
-  sd.c = data$SD_H_control,
-  studlab = paste0(first_author, year_publication),
-  data = data,
-  sm= "MD",
-  random = TRUE,
-  label.e = "CHF",
-  label.c = "Control"
-)
-
-forest(hip)
-```
-
-
-```{r}
-hip <- metacont(
-  n.e = ,
-  mean.e = ,
-  sd.e = ,
-  n.c = ,
-  mean.c = ,
-  sd.c = ,
-  studlab = ,
-  data = ,
-  sm= "MD",
-  random = TRUE,
-  label.e = ,
-  label.c = 
-  
-)
-```
-
 
 ### Discussion
 *--- on construction ---*
