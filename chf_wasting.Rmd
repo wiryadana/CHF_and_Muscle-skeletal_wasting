@@ -44,7 +44,7 @@ library(robvis)
 data <- read_sheet("https://docs.google.com/spreadsheets/d/1bVR6JFDdwcGuJiUJCh8uBhkvIABtRFWS4KGM85_aHNg/edit#gid=1037489593", sheet = 2)
 ```
 
-```{r fig.align='center', fig.width=6, fig.height=4}
+```{r fig.align='center', fig.width=12, fig.height=4}
 hip <- metacont(
   n.e = data$total_HF,
   mean.e = data$mean_H_HF,
@@ -60,9 +60,27 @@ hip <- metacont(
   label.c = "Control"
 )
 
-forest(hip)
+f_hip <- forest(hip)
+f_hip
 ```
+```{r fig.align='center', fig.width=6, fig.height=4}
+lumbar <- metacont(
+  n.e = total_V_HF,
+  mean.e = mean_V_HF,
+  sd.e = SD_V_HF,
+  n.c = total_V_control,
+  mean.c = mean_V_control,
+  sd.c = SD_V_HF,
+  sudlab = paste0(first_author, year_publication),
+  data = data,
+  sm= "MD",
+  random = TRUE,
+  label.e = "CHF",
+  label.c = "Control"
+)
 
+f_lumbar <- forest(lumbar)
+```
 
 ```{r}
 hip <- metacont(
